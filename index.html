@@ -5,14 +5,24 @@
 </head>
 <body>
     <div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Contact me</h2>
-        <p>Email: ayan.ubaidulla27@fizmat.kz</p>
-        <p>Discord: ayakich</p>
-        <p>Telegram: @ayakich</p>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact me</h2>
+            <form method="post" action="https://script.google.com/macros/s/AKfycbx2-XlE-2SL4WbPES0ajegecsrP62Qb_FMy2kYBfpL3MECUemJ5Kdw6bm01eVuGQF3iGg/exec" id="contact-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+    
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Your message:</label>
+                <input type="text" id="message" name="message" required><br><br>
+    
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </div>
-    </div>
+    
     <nav>
         <a class="logo" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">Ubaidulla Ayan</a>
         <a href="#aboutme" class="link">About me</a>
@@ -32,14 +42,15 @@
     </section>
 
     <section id="aboutme" class="dflex sectionHero">
-        <div class="korobka dflex hcenter wcenter">
-            <div>
-                <h2>I’m a passionate 16-year old from Almaty, Kazakhstan. I love creating websites and learning new technologies every day.</h2>
-            </div>
+    <div class="korobka dflex hcenter wcenter img">
+        <img src="cat.png">
+    </div>
+
+    <div class="korobka dflex hcenter wcenter">
+        <div>
+            <h2>I’m a passionate 16-year-old from Almaty, Kazakhstan. I love creating websites and learning new technologies every day.</h2>
         </div>
-        <div class="korobka  dflex hcenter wcenter img">
-            <img src="cat.png">
-        </div>
+    </div>
     </section>
 
     <section id="projects" class="dflex sectionHero">
@@ -53,18 +64,38 @@
         </div>
     </section>
 
-    <section id="skills" class="dflex sectionHero">
-        <div class="korobka dflex hcenter wcenter">
-            <div>
-                <h1>My main skills:</h1>
-            </div>
-        </div>
-        <div class="korobka  dflex hcenter wcenter">
-            <h3>Web development</h3>
-            <h3>Problem-solving and creativity</h3>
-            <h3>Dedication and hardworking</h3>
-        </div>
+    <section id="skills" class="sectionHero skills-section">
+    <h1 class="skills-title">My skills</h1>
+
+    <table class="skills-table">
+        <tr>
+            <th>Skill</th>
+            <th>Level</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Web Development</td>
+            <td>Good</td>
+            <td>HTML, CSS, basic JavaScript</td>
+        </tr>
+        <tr>
+            <td>Problem Solving</td>
+            <td>Good</td>
+            <td>Logical thinking and finding solutions</td>
+        </tr>
+        <tr>
+            <td>Creativity</td>
+            <td>Strong</td>
+            <td>Design ideas and unique layouts</td>
+        </tr>
+        <tr>
+            <td>Hardworking</td>
+            <td>Strong</td>
+            <td>Motivated and focused on improvement</td>
+        </tr>
+    </table>
     </section>
+    
     <script>
     const modal = document.getElementById("modal");
     const btn = document.querySelector(".btn_krasiviy");
@@ -84,6 +115,7 @@
         }
     };
 </script>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
