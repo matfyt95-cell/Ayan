@@ -3,6 +3,7 @@ html {
 }
 body{
     margin: 0;
+    padding-top: 90px;
 }
 h1{
     font-size: 100px;
@@ -44,7 +45,7 @@ h3{
 img{
     width: 40%;
     z-index: 6;
-    
+
 }
 .krug{
     z-index: 5;
@@ -67,8 +68,16 @@ nav{
     height: 90px;
     display: flex;
     align-items: center;
-    padding-left: 50px;
+
+    padding: 0 40px;
     background-color: white;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
 }
 .link{
     font-size: 30px;
@@ -85,11 +94,13 @@ nav{
     border: 1px solid rgb(59, 59, 59);
     padding: 10px 60px;
     text-decoration: none;
+    transition: all 0.2s ease;
 }
-.logo:hover {
+.logo:hover{
     background-color: pink;
     color: black;
-    transition: 0.3s;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
+    transform: translateY(-3px);
 }
 .right{
     position: absolute;
@@ -103,7 +114,7 @@ nav{
     border-radius: 30px;
     cursor: pointer;
     margin-left: auto;
-    margin-right: 30px;
+    transition: all 0.3s ease;
 }
 .btn_krasiviy:hover{
     background-color: rgb(255, 134, 154);
@@ -147,4 +158,69 @@ nav{
     right: 25px;
     font-size: 40px;
     cursor: pointer;
+}
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-form input {
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    background-color: pink;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: rgb(255, 134, 154);
+}
+
+
+.skills-section {
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.skills-title {
+    font-size: 80px;
+    margin-bottom: 60px;
+}
+
+.skills-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 1000px;
+    font-size: 28px;
+}
+
+.skills-table th,
+.skills-table td {
+    border: 2px solid white;
+    padding: 20px 30px;
+}
+
+.skills-table th {
+    background-color: pink;
+    color: black;
+    font-weight: bold;
+}
+
+.skills-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
